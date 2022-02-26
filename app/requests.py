@@ -10,3 +10,16 @@ api_key = app.config['NEWS_API_KEY']
 
 #getting the news base url
 base_url = app.config['NEWS_API_BASE_URL']
+
+def get_channels(search):
+    '''
+    function that gets the json responce to the channel source request
+    '''
+    get_news_url = base_url.format(search,api_key)
+    with urllib.request.urlopen(get_news_url) as url:
+        get_news_data = url.read()
+        get_news_response = json.loads(get_news_data)
+        news_result = None
+
+        news_result = process(get_news_response
+        )
