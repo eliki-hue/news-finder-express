@@ -1,6 +1,6 @@
 from app import app
 import urllib.request, json
-from models import channel
+from .models import channel
 
 Channel = channel.Channel
 
@@ -42,5 +42,5 @@ def process(channel):
         channel_info.append(channel_object)
 
     return channel_info
-    
+
 

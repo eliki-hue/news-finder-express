@@ -1,4 +1,4 @@
-from gettext import install
+
 from flask import render_template
 from app import app
 from app.requests import get_channels
