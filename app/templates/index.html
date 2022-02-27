@@ -3,10 +3,12 @@
     <h3>News channels</h3>
     <ul>
         {% for item in sources %}
-        <li><img src="{{item.url}}" alt=""> 
-            {{item}}<br>
-            {{item.id}}
+        {% if item.language=='en' %}
+        <li>
+            
+        
              {{item.name}} <br> {{item.description}}</li>
+             {% endif %}
         {% endfor %}
 
     </ul>
