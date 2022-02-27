@@ -2,8 +2,11 @@
     <!-- section that displays news channels -->
     <h3>News channels</h3>
     <ul>
-        {% for channel in channels %}
-        <li> {{channel.name}}</li>
+        {% for item in sources %}
+        <li><img src="{{item.url}}" alt=""> 
+            {{item}}<br>
+            {{item.id}}
+             {{item.name}} <br> {{item.description}}</li>
         {% endfor %}
 
     </ul>

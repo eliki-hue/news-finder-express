@@ -1,7 +1,8 @@
 
 from flask import render_template
 from app import app
-from app.requests import get_channels
+from app.models import channel
+from app.requests import get_channels,process_result
 
 
 
@@ -15,5 +16,6 @@ def index():
     # getting channels
     channels = get_channels('sources')
     print(channels)
+    
     title = 'Welcome to this website that displays all the news channels'
     return render_template('index.html', title =title, sources= channels)

@@ -19,28 +19,39 @@ def get_channels(search):
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
-        news_result = None
+        news_results =None
 
-        news_result = process(get_news_response)
-        return news_result
+        if get_news_response['sources']:
+            news_results_list = get_news_response['sources']
+            news_results = process_result(news_results_list)
+
+
+
+        
+        return news_results
         
 
-def process(channel):
+def process_result(news_lists):
+    
     '''
     function that processes channel results
     '''
+   
     channel_info = []
-    for item in channel:
-        id = channel.get('id')
-        name = channel.get('name')
-        description = channel.get('description')
-        url = channel.get('url')
-        category = channel.get('category')
-        country = channel.get('country')
+    
+        
+    # channel_info.append(news_lists)
 
-        channel_object = Channel(id, name, description, url, category, country)
-        channel_info.append(channel_object)
+            # id = news_list[0]
+            # name = news_list[1]
+            # description = news_list[2]
+            # url = news_list[3]
+            # category = news_list[4]
+            # country = news_list[5]
 
-    return channel_info
+            # channel_object = Channel(id, name, description, url, category, country)
+            # channel_info.append(channel_object)
+           
+    return news_lists
 
 
