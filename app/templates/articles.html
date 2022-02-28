@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{id}} news</title>
 </head>
-<body>
+<body style="margin: 30%vw;">
     
-    
+    <div style="margin: 30%vw; margin-left: 50px;">
+        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font: size 200px; font-weight: bolder;"><strong>Top Headlines from all over the world</strong></h1>
         {% for item in articles %}
        
         <div style="border:none rgb(221, 147, 74);">
-            <div style="border:none rgb(209, 221, 202); background-color: white; color: rgb(28, 18, 218); font-size: x-large;">
+            <div style="border:none rgb(209, 221, 202); background-color: white; color: rgb(28, 18, 218); font-size: larger;">
                 <h2>{{item.title}}</h2>
-                <a  href="{{item.url}}" target="blank"><img src="{{item.urlToImage}}" alt="" srcset=""></a>
-            </div>
-            <div style="border:none rgb(209, 221, 202); background-color: rgba(173, 235, 101, 0.57); "><br>
-                {{item.name}}
-                
+                <div style="width: 20%vw;height: 5%vh;">
+                    <a  href="{{item.url}}" target="blank"><img src="{{item.urlToImage}}" alt=""  srcset=""></a>
+           
+                </div> </div>
+            <div style=" background-color: rgba(173, 235, 101, 0.57); margin-right: 30px; "><br>
+               <h3>{{item.description}} </h3>
+                author: <strong>{{item.author}}</strong>      
                
-               published at  {{item.publishedAt|truncate(13)}}
+               published at:  {{item.publishedAt|truncate(13)}} <br>
                 <br>
             
             </div><br><br>
         {% endfor %}
+    </div>
+       
 </body>
 </html>
