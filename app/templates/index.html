@@ -10,6 +10,8 @@
     <div>
         <!-- section that displays news channels -->
     <h3>News channels</h3>
+    <a href="https://abcnews.go.com
+    ">click</a>
     <ul>
         {% for item in sources %}
         {% if item.language=='en' %}
@@ -19,9 +21,14 @@
             </div>
             <div style="border:none rgb(209, 221, 202); background-color: rgba(173, 235, 101, 0.57); "><br>
                 {{item.description}}
+                "{{item.url}}"
+                
             
             </div>
-        </div><br>
+        </div>
+        <a  href="{{item.url}}" target="blank">view home page</a>
+        <br>
+      
           
              <br> </li>
              {% endif %}
@@ -30,7 +37,7 @@
     </ul>
     </div>
     <div>
-        {{item}}
+    
     </div>
 </body>
 </html>

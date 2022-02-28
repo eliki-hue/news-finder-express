@@ -19,3 +19,8 @@ def index():
     
     title = 'Welcome to this website that displays all the news channels'
     return render_template('index.html', title =title, sources= channels)
+
+@app.route('/news/<name>')
+def get_channel(name):
+    '''function that goes to the home page of selected news source'''
+    
