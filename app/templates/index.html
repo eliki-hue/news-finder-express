@@ -7,30 +7,25 @@
     <title>News</title>
 </head>
 <body>
-    <div>
+    <div style="margin: 40px;">
         <!-- section that displays news channels -->
-    <h3>News channels</h3>
+    <h1>Top International News channels </h1>
     
   
     <ul>
         {% for item in sources %}
         {% if item.language=='en' %}
-        <li><div style="border:none rgb(221, 147, 74);">
-            <div style="border:none rgb(209, 221, 202); background-color: rgb(237, 236, 242); color: rgb(28, 18, 218); font-size: x-large;">
-                {{item.name}}
-                {{item.id}}
-            </div>
-            <div style="border:none rgb(209, 221, 202); background-color: rgba(173, 235, 101, 0.57); "><br>
-                {{item.description}}
-                "{{item.url}}"
-                
-            
-            </div>
+           
+          <a href="/news/{{item.id}}"> <div style="border:none rgb(209, 221, 202);  color: rgb(28, 18, 218); font-size: x-large;">
+            {{item.name}}
+            {{item.id}}
         </div>
-        <a  href="{{item.url}}" target="blank">view home page</a>
-        <br>
-      
-          <a href="/news/{{item.id}}">view</a>
+        <div style="border:none rgb(209, 221, 202); background-color: rgba(132, 233, 16, 0.57);margin-right: 20px;"><br>
+             <div style="margin-left: 10px;">{{item.description}}</div> 
+            <br>
+            
+        
+        </div></a><br>
              <br> </li>
              {% endif %}
         {% endfor %}
