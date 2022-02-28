@@ -4,41 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
+    <title>{{id}} news</title>
 </head>
 <body>
-    <div>
-        <!-- section that displays news channels -->
-    <h3>News channels</h3>
     
-  
-    <ul>
-        {% for item in sources %}
-        {% if item.language=='en' %}
+    
+        {% for item in articles %}
+       
         <li><div style="border:none rgb(221, 147, 74);">
             <div style="border:none rgb(209, 221, 202); background-color: rgb(237, 236, 242); color: rgb(28, 18, 218); font-size: x-large;">
-                {{item.name}}
-                {{item.id}}
+                {{item.title}}
             </div>
             <div style="border:none rgb(209, 221, 202); background-color: rgba(173, 235, 101, 0.57); "><br>
-                {{item.description}}
+                {{item.name}}
                 "{{item.url}}"
                 
             
             </div>
-        </div>
-        <a  href="{{item.url}}" target="blank">view home page</a>
-        <br>
-      
-          <a href="/news/{{item.id}}">view</a>
-             <br> </li>
-             {% endif %}
         {% endfor %}
-
-    </ul>
-    </div>
-    <div>
-    
-    </div>
 </body>
 </html>

@@ -3,6 +3,7 @@ class Config:
     General configuration parent class
     '''
     NEWS_API_BASE_URL='https://newsapi.org/v2/top-headlines/{}?apiKey={}'
+    ARTICLES_URL = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
 
 
 
@@ -25,3 +26,6 @@ class DevConfig(Config):
     '''
 
     DEBUG = True
+
+    # https://newsapi.org/v2/top-headlines/sources=bbc?apiKey=bb5dc174241747118fdf8b391701fbe9
+    #GET https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=bb5dc174241747118fdf8b391701fbe9
