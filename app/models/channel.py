@@ -9,3 +9,4 @@ class Channel:
         self.description =description
         self.url =url
         self.category = category
+
