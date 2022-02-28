@@ -1,6 +1,6 @@
 class Article:
     '''
-    Channel class to define channel object
+    article class to define article object
     '''
     def __init__(self, id, name, url, image, date):
         self.id = id
