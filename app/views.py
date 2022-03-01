@@ -1,5 +1,4 @@
 
-from turtle import title
 from flask import render_template
 from app import app
 from app.models import channel
@@ -17,9 +16,9 @@ def index():
     # getting channels
     channels = get_channels('sources')
     print(channels)
-    title ='News-finder-express'
+    
   
-    return render_template('index.html',title=title, sources= channels)
+    return render_template('index.html', sources= channels)
 
 @app.route('/news/<id>')
 def articles(id):
