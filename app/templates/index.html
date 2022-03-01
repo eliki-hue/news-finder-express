@@ -4,27 +4,30 @@
     <div style="margin: 20px;">
         <!-- section that displays news channels -->
     <h1>Top International News channels </h1>
-    
-  
-    <ul>
-        {% for item in sources %}
-        {% if item.language=='en' %}
-           
-          <a href="/news/{{item.id}}"> <div style="border:none rgb(209, 221, 202);  color: rgb(28, 18, 218); font-size: x-large;">
-            {{item.name}}
-            
-        </div>
-        <div style="border:none rgb(209, 221, 202); background-color: rgba(132, 233, 16, 0.57);"><br>
-             <div style="margin-left: 10px;"><h4>{{item.description}}</h4></div> 
-            <br>
-            
-        
-        </div></a><br>
-             <br> </li>
-             {% endif %}
-        {% endfor %}
 
-    </ul>
+    </div>
+
+    <div style="margin-right: 20px;">
+        <ul>
+            {% for item in sources %}
+            {% if item.language=='en' %}
+               
+              <a href="/news/{{item.id}}"> <div style="border:none rgb(209, 221, 202);  color: rgb(28, 18, 218); font-size: x-large;">
+                {{item.name}}
+                
+            </div>
+            <div style=" background-color: rgba(132, 233, 16, 0.57);"><br>
+                 <div style="margin-left: 10px;"><h4>{{item.description}}</h4></div> 
+                <br>
+                
+            
+            </div></a><br>
+                 <br> </li>
+                 {% endif %}
+            {% endfor %}
+    
+        </ul>
+    
     </div>
     {% endblock %}
   
