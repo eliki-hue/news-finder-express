@@ -1,34 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{id}} news</title>
-</head>
+{% extends 'base.html' %}
+
+{% block content%}
 <body style="margin: 30%vw;">
-    
-    <div style="margin: 30%vw; margin-left: 50px;">
-        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font: size 200px; font-weight: bolder;"><strong>Top Headlines from all over the world</strong></h1>
-        {% for item in articles %}
-       
-        <div style="border:none rgb(221, 147, 74);">
-            <div style="border:none rgb(209, 221, 202); background-color: white; color: rgb(28, 18, 218); font-size: larger;">
-                <h2>{{item.title}}</h2>
-                <div style="width: 20%vw;height: 5%vh;">
-                    <a  href="{{item.url}}" target="blank"><img src="{{item.urlToImage}}" alt=""  srcset=""></a>
-           
-                </div> </div>
-            <div style=" background-color: rgba(173, 235, 101, 0.57); margin-right: 30px; "><br>
-               <h3>{{item.description}} </h3>
-                author: <strong>{{item.author}}</strong>      
-               
-               published at:  {{item.publishedAt|truncate(13)}} <br>
-                <br>
-            
-            </div><br><br>
-        {% endfor %}
+    <div class="container">
+        <div class="row">
+            <div class="col-ms-12">
+                <div style="margin: 30%vw; margin-left: 50px;">
+                    <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font: size 200px; font-weight: bolder;"><strong>Top Headlines from all over the world</strong></h1>
+                    {% for item in articles %}
+                   
+                    <div style="border:none rgb(221, 147, 74);">
+                        <div style="border:none rgb(209, 221, 202); background-color: white; color: rgb(28, 18, 218); font-size: larger;">
+                            <h2>{{item.title}}</h2>
+                            <div style="width: 20%vw;height: 5%vh;">
+                                <a  href="{{item.url}}" target="blank"><img src="{{item.urlToImage}}" alt="" style="max-width: 90% vw;" srcset=""></a>
+                       
+                            </div> </div>
+                        <div style=" background-color: rgba(173, 235, 101, 0.57); margin-right: 30px; "><br>
+                           <h3>{{item.description}} </h3>
+                            author: <strong>{{item.author}}</strong>      
+                           
+                           published at:  {{item.publishedAt|truncate(13)}} <br>
+                            <br>
+                        
+                        </div><br><br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
+{% endblock %}
+    
        
 </body>
 </html>
