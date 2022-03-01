@@ -1,15 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<body style="margin: 30%vw;">
+
+
+
+
+
     <div class="container">
         <div class="row">
             <div class="col-ms-12">
                 <div style="margin: 30%vw; margin-left: 50px;">
                     <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font: size 200px; font-weight: bolder;"><strong>Top Headlines from all over the world</strong></h1>
                     {% for item in articles %}
+                    <div class="media">
+                        <h2 class="mt-0" style="color: blue;">{{item.title}}</h2>
+                        <a class="align-self-start mr-3" href="{{item.url}}" target="blank"><img class="align-self-start mr-3" src="{{item.urlToImage}}" alt="" style="width: 100%; height: auto;" srcset=""></a>
+                       
+                        <div class="media-body">
+                          
+                          <h3>{{item.description}} </h3>
+                          <h5> author: <strong>{{item.author}}</strong>      
+                           
+                            published at:  {{item.publishedAt|truncate(13)}} </h5>
+                        </div>
+                      </div>
+
+
                    
-                    <div style="border:none rgb(221, 147, 74);">
+                    <!-- <div style="border:none rgb(221, 147, 74);">
                         <div style="border:none rgb(209, 221, 202); background-color: white; color: rgb(28, 18, 218); font-size: larger;">
                             <h2>{{item.title}}</h2>
                             <div style="width: 20%vw;height: 5%vh;">
@@ -23,7 +41,8 @@
                            published at:  {{item.publishedAt|truncate(13)}} <br>
                             <br>
                         
-                        </div><br><br>
+                        </div><br><br> -->
+                        
                     {% endfor %}
                 </div>
             </div>
@@ -32,5 +51,3 @@
 {% endblock %}
     
        
-</body>
-</html>

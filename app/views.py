@@ -26,5 +26,5 @@ def articles(id):
     article view to display all article from a given source
     '''
     visited = get_source_articles(id)
-    title ='All articles from '+ id 
+    title = id 
     return render_template('articles.html', title=title, articles=visited)
