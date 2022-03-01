@@ -13,8 +13,8 @@
                     <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font: size 200px; font-weight: bolder;"><strong>Top Headlines from all over the world</strong></h1>
                     {% for item in articles %}
                     <div class="media">
-                        <h2 class="mt-0" style="color: blue;">{{item.title}}</h2>
-                        <a class="align-self-start mr-3" href="{{item.url}}" target="blank"><img class="align-self-start mr-3" src="{{item.urlToImage}}" alt="" style="width: 100%; height: auto;" srcset=""></a>
+                        
+                        <a class="align-self-start mr-3" href="{{item.url}}" target="blank"><h2 class="mt-0" style="color: blue;">{{item.title}}</h2><img class="align-self-start mr-3" src="{{item.urlToImage}}" alt="" style="width: 100%; height: auto;" srcset=""></a>
                        
                         <div class="media-body">
                           
