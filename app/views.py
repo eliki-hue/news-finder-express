@@ -17,8 +17,8 @@ def index():
     channels = get_channels('sources')
     print(channels)
     
-    title = 'Welcome to this website that displays all the news channels'
-    return render_template('index.html', title =title, sources= channels)
+  
+    return render_template('index.html', sources= channels)
 
 @app.route('/news/<id>')
 def articles(id):
