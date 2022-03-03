@@ -8,7 +8,7 @@
 
 **Author information:** The author of the project is Elijah Kiragu, a student in Moringa.
 **
-**Setup instructions:** access my heroku account then clone the project to your device or fork the repository.
+**Setup instructions:** access my github account then clone the project to your device or fork the repository or fork the project in the github.
 
 **Technologies used:** HTML, CSS, PYTHON and  BOOTSTRAP and Flask
 
