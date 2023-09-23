@@ -6,6 +6,7 @@ from app.requests import get_channels,get_source_articles
 
 
 
+
 # Views
 @app.route('/')
 def index():

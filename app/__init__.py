@@ -18,3 +18,6 @@ from app import views
 
 bootstrap = Bootstrap()
 
+def test():
+    to ='hello'
+    return to
